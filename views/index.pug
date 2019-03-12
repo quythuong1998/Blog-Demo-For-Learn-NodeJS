@@ -1,0 +1,132 @@
+extends ./layouts/slideshow
+block slideshow
+
+	main.main-content
+		section.slideshow
+			.slideshow-inner
+				.slides
+					.slide.is-active
+						.slide-content
+							.caption
+								.title Chào bé Lê Văn Đạt
+								.text
+									p Chị vẫn khoẻ, Em còn làm ở đó không ta? 
+								a.btn(href="#")
+									span.btn-inner Learn More
+						.image-container
+							img.image(src="https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-1.jpg" alt="")
+					.slide
+						.slide-content
+							.caption
+								.title Slide title 2
+								.text
+									p Slide description 2
+								a.btn(href="#")
+									span.btn-inner Learn More
+						.image-container
+							img.image(src="https://www.alixbdanthenay.fr/wp-content/uploads/2015/07/Indispensable-4-1.jpg" alt="")
+					.slide
+						.slide-content
+							.caption
+								.title Slide title 3
+								.text
+									p Slide description 3
+								a.btn(href="#")
+									span.btn-inner Learn More
+						.image-container
+							img.image(src="https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/11.jpg" alt="")
+					.slide
+						.slide-content
+							.caption
+								.title Slide title 4
+								.text
+									p Slide description 4
+								a.btn(href="#")
+									span.btn-inner Learn More
+						.image-container
+							img.image(src="https://www.alixbdanthenay.fr/wp-content/uploads/2016/11/20mars17-sans-typo.jpg" alt="")
+				.pagination
+					.item.is-active
+						span.icon 1
+					.item
+						span.icon 2
+					.item
+						span.icon 3
+					.item
+						span.icon 4
+				.arrows
+					.arrow.prev
+						span.svg.svg-arrow-left
+							svg#svg4-Layer_1(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px" viewbox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve")
+								path(d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z")
+							span.alt.sr-only
+					.arrow.next
+						span.svg.svg-arrow-right
+							svg#svg5-Layer_1(version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px" viewbox="0 0 14 26" enable-background="new 0 0 14 26" xml:space="preserve")
+								path(d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z")
+							span.alt.sr-only
+
+
+
+
+
+
+	.container
+		// Portfolio Item Heading
+		h1.my-4
+			| Đọc Nhiều Nhất
+		// Portfolio Item Row
+		.row
+			.col-md-8
+				img.img-fluid(src="http://placehold.it/750x500" alt="")
+			.col-md-4
+				h3.my-3 Project Description
+				p
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.
+				h3.my-3 Project Details
+				ul
+					li Lorem Ipsum
+					li Dolor Sit Amet
+					li Consectetur
+					li Adipiscing Elit
+		// /.row
+		// Related Projects Row
+		h3.my-4 Truyện xx
+		.row
+			.col-md-3.col-sm-6.mb-4
+				a(href="#")
+					img.img-fluid(src="http://placehold.it/500x300" alt="")
+			.col-md-3.col-sm-6.mb-4
+				a(href="#")
+					img.img-fluid(src="http://placehold.it/500x300" alt="")
+			.col-md-3.col-sm-6.mb-4
+				a(href="#")
+					img.img-fluid(src="http://placehold.it/500x300" alt="")
+			.col-md-3.col-sm-6.mb-4
+				a(href="#")
+					img.img-fluid(src="http://placehold.it/500x300" alt="")
+			span more
+		// /.row
+		h3.my-4 Truyện xx
+		.row
+			.col-md-3.col-sm-6.mb-4
+				a(href="#")
+					img.img-fluid(src="http://placehold.it/500x300" alt="")
+			.col-md-3.col-sm-6.mb-4
+				a(href="#")
+					img.img-fluid(src="http://placehold.it/500x300" alt="")
+			.col-md-3.col-sm-6.mb-4
+				a(href="#")
+					img.img-fluid(src="http://placehold.it/500x300" alt="")
+			.col-md-3.col-sm-6.mb-4
+				a(href="#")
+					img.img-fluid(src="http://placehold.it/500x300" alt="")
+		// /.row
+	// /.container
+
+
+	script(src='javascript/slideshow.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js')
+
+

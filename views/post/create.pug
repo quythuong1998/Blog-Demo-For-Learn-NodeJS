@@ -1,0 +1,16 @@
+extends ../layouts/normal
+
+block normal
+	h1 Create new post
+
+	form(action="/post/create", method="POST")
+		.form-group.row
+			label Name:
+			input.form-control(name="name" type="text" )
+			label Author:
+			input.form-control(name="author" type="text")
+			label Description:
+			input.form-control(name="description" type="text")
+			label Content:
+			input.form-control(name="content" type="text")
+			button.btn.btn-primary.mt-3 create

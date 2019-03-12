@@ -1,0 +1,30 @@
+extends ../layouts/normal
+
+block normal
+	h1 List:
+
+	form(action="/post/search", method="GET")
+		div(class="form-group form-inline")
+			input(type="text", name='q' class="form-control" value="input name")
+			button(class="btn btn-primary ml-2") search
+
+	table.table
+		tr
+			th ID
+			th Name
+			th Author
+			th Description
+			th Content
+			th View
+		each post in posts
+			tr
+				td= post.id
+				td=post.name
+				td=post.author
+				td=post.description
+				td=post.content
+				td
+					a.btn.btn-light(href="/post/" + post.id) view
+	
+
+	a.btn.btn-primary(href="/post/create") new post

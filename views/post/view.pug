@@ -1,0 +1,13 @@
+extends ../layouts/normal
+
+block normal
+	h1.display-4
+		span= post.name
+	h1.font-weight-lighter.ml-5 Author: 
+			span=post.author
+	p.blockquote.font-weight-lighter.pl-5= post.description
+
+	span.blockquote.font-weight-light.mt-10.ml-5= post.content
+	
+
+

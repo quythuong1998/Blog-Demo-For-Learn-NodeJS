@@ -1,0 +1,31 @@
+html
+	head
+		link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous')
+		link(rel='stylesheet' href='styles/slideshow.css')
+		
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C400italic%2C600%2C700%2C700italic%7COswald%3A400%2C300%7CVollkorn%3A400%2C400italic" rel="stylesheet")
+	body
+		
+		nav.navbar.navbar-expand-lg.navbar-light.bg-light
+			button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation")
+				span.navbar-toggler-icon
+			a.navbar-brand(href="/") Quy's Blog
+			#navbarTogglerDemo03.collapse.navbar-collapse
+				ul.navbar-nav.mr-auto.mt-2.mt-lg-0
+					li.nav-item.active
+						a.nav-link(href="/")
+							| Home 
+							span.sr-only (current)
+					li.nav-item
+						a.nav-link(href="/post") Post manager
+					li.nav-item
+						a.nav-link.disabled(href="#") Disabled
+				//- form.form-inline.my-2.my-lg-0
+				//- 	input.form-control.mr-sm-2(type="search" placeholder="Search" aria-label="Search")
+				//- 	button.btn.btn-outline-success(type="submit") Search
+		block slideshow
+		script(src='javascript/slideshow.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js')
+
