@@ -1,16 +1,20 @@
 extends ../layouts/normal
 
 block normal
-	h1 Create new post
+	h1.font-weight-light Create new post
+
+	if errors
+		each error in errors
+			.alert.alert-danger= error
 
 	form(action="/post/create", method="POST")
 		.form-group.row
 			label Name:
-			input.form-control(name="name" type="text" )
+			input.form-control(name="name" type="text" value= values ? values.name : "")
 			label Author:
-			input.form-control(name="author" type="text")
+			input.form-control(name="author" type="text" value= values ? values.author : "")
 			label Description:
-			input.form-control(name="description" type="text")
+			input.form-control(name="description" type="text" value= values ? values.description : "")
 			label Content:
-			input.form-control(name="content" type="text")
+			input.form-control(name="content" type="text" value= values ? values.content : "")
 			button.btn.btn-primary.mt-3 create
