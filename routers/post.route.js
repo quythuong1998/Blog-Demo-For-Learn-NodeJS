@@ -4,6 +4,7 @@ const shortid = require('shortid');
 
 
 var postController = require('../controller/post.controller'); 
+var postValidate = require('../validation/post.validation');
 
 postRouter.get('/', postController.index);
 
@@ -17,7 +18,7 @@ postRouter.get('/create', function(req, res) {
 });
 
 
-postRouter.post('/create', postController.postPost);
+postRouter.post('/create', postValidate.postValidation, postController.postPost);
 
 
 postRouter.get('/:id', postController.viewPost)
