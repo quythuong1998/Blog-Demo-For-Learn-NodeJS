@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const port = 3000;
@@ -18,7 +20,7 @@ app.set('views', './views');
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
-app.use(cookieParser('test1234567890')); //day la secret, dang ra phai generate mot chuoi ngau nhien nao no de vao day
+app.use(cookieParser(process.env.SESSION_SECRET)); //day la secret, dang ra phai generate mot chuoi ngau nhien nao no de vao day
 app.use(express.static('publicfiles'));
 
 app.get('/', function (request, respond) {		
