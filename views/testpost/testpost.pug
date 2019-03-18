@@ -1,0 +1,59 @@
+extends ../layouts/normal
+
+block normal
+	h1.font-weight-light List test post
+
+	.row
+		each post in posts
+			.col-sm-6.col-md-4.col-lg-3.mt-5
+				.card.mb-3
+					img.card-img-top(src=post.image alt="Card image cap" )
+					.card-body
+						h5.card-title= post.name
+						p.card-text= post.content
+						p.card-text
+							small.text-muted=  post.author
+
+
+	nav(aria-label="...")
+		if pages > 0
+			ul.pagination.justify-content-center
+				//trang dau
+				if currentPage == 1
+					li.page-item.disabled
+						a(aria-disabled="true").page-link First
+				else
+					li.page-item
+						a.page-link(href="/testpost/testpost?page=1") First
+				- var i = (Number(currentPage) > 3 ? Number(currentPage) - 1 : 1)
+				//- if currentPage > 5
+				//- 	i = (Number)currentPage - 4
+				//- else
+				//- 	i = 1
+				if (i !== 1)
+					//li.page-item.disabled
+						//a(aria-disabled="true").page-link ...
+				- for (; i <= (Number(currentPage) + 1) && i <= pages; i++) 
+					if (i == currentPage)
+						li.active
+							a.page-link= i
+					else
+						li.page-item
+							a.page-link(href="/testpost/testpost?page=" + i)= i 
+					if (i == Number(currentPage) + 1 && i < pages)
+						//li.page-item.disabled
+							//a(aria-disabled="true").page-link ...
+				//trang cuoi			
+				if (currentPage == pages)
+					li.page-item.disabled
+							a(aria-disabled="true").page-link Last
+				else 
+					li
+						a.page-link(href="/testpost/testpost?page="+ pages) Last
+
+
+
+
+
+
+

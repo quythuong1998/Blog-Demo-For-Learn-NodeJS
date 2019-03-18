@@ -10,6 +10,7 @@ var cookieParser = require('cookie-parser')
 var postRoute = require('./routers/post.route');
 var authRoute = require('./routers/auth.route');
 var authMiddleware = require('./middlewares/auth.middleware');
+var testpostRoute = require('./routers/testpost.route');
 
 
 //using for get info of body, user input
@@ -30,7 +31,7 @@ app.get('/', function (request, respond) {
 //tat ca cac /póst được gơm lại thành 1 route như thế này
 app.use('/post',authMiddleware.requireAuth ,postRoute);
 app.use('/auth', authRoute);
-
+app.use('/testpost', testpostRoute);
 
 
 app.listen(port, function () {
