@@ -6,6 +6,15 @@ const port = 3000;
 const shortid = require('shortid');
 var cookieParser = require('cookie-parser')
 
+//connect database mongodb
+var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true}, function (err) {
+    if (err) throw err;  
+    console.log('Successfully connected');
+})
+
+
+
 
 var postRoute = require('./routers/post.route');
 var authRoute = require('./routers/auth.route');

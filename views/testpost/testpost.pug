@@ -15,41 +15,37 @@ block normal
 							small.text-muted=  post.author
 
 
-	nav(aria-label="...")
-		if pages > 0
-			ul.pagination.justify-content-center
-				//trang dau
-				if currentPage == 1
-					li.page-item.disabled
-						a(aria-disabled="true").page-link First
-				else
-					li.page-item
-						a.page-link(href="/testpost/testpost?page=1") First
-				- var i = (Number(currentPage) > 3 ? Number(currentPage) - 1 : 1)
-				//- if currentPage > 5
-				//- 	i = (Number)currentPage - 4
-				//- else
-				//- 	i = 1
-				if (i !== 1)
-					//li.page-item.disabled
-						//a(aria-disabled="true").page-link ...
-				- for (; i <= (Number(currentPage) + 1) && i <= pages; i++) 
-					if (i == currentPage)
-						li.active
-							a.page-link= i
-					else
-						li.page-item
-							a.page-link(href="/testpost/testpost?page=" + i)= i 
-					if (i == Number(currentPage) + 1 && i < pages)
-						//li.page-item.disabled
-							//a(aria-disabled="true").page-link ...
-				//trang cuoi			
-				if (currentPage == pages)
-					li.page-item.disabled
-							a(aria-disabled="true").page-link Last
-				else 
-					li
-						a.page-link(href="/testpost/testpost?page="+ pages) Last
+	//- nav(aria-label="...")
+	//- 	if pages > 0
+	//- 		ul.pagination.justify-content-center
+	//- 			//trang dau
+	//- 			if currentPage == 1
+	//- 				li.page-item.disabled
+	//- 					a(aria-disabled="true").page-link First
+	//- 			else
+	//- 				li.page-item
+	//- 					a.page-link(href="/testpost/testpost?page=1") First
+	//- 			- var i = (Number(currentPage) > 3 ? Number(currentPage) - 1 : 1)
+	//- 			if (i !== 1)
+	//- 				//li.page-item.disabled
+	//- 					//a(aria-disabled="true").page-link ...
+	//- 			- for (; i <= (Number(currentPage) + 1) && i <= pages; i++) 
+	//- 				if (i == currentPage)
+	//- 					li.active
+	//- 						a.page-link= i
+	//- 				else
+	//- 					li.page-item
+	//- 						a.page-link(href="/testpost/testpost?page=" + i)= i 
+	//- 				if (i == Number(currentPage) + 1 && i < pages)
+	//- 					//li.page-item.disabled
+	//- 						//a(aria-disabled="true").page-link ...
+	//- 			//trang cuoi			
+	//- 			if (currentPage == pages)
+	//- 				li.page-item.disabled
+	//- 						a(aria-disabled="true").page-link Last
+	//- 			else 
+	//- 				li
+	//- 					a.page-link(href="/testpost/testpost?page="+ pages) Last
 
 
 
