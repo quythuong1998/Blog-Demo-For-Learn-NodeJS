@@ -8,8 +8,8 @@ var cookieParser = require('cookie-parser')
 
 //connect database mongodb
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true}, function (err) {
-    if (err) throw err;  
+mongoose.connect(process.env.MONGO_URL,{ useNewUrlParser: true } ,  function (err) {
+    if (err) throw err;
     console.log('Successfully connected');
 })
 
@@ -38,7 +38,7 @@ app.get('/', function (request, respond) {
 }) //index trong views
 
 //tat ca cac /póst được gơm lại thành 1 route như thế này
-app.use('/post',authMiddleware.requireAuth ,postRoute);
+app.use('/post', authMiddleware.requireAuth, postRoute);
 app.use('/auth', authRoute);
 app.use('/testpost', testpostRoute);
 
@@ -46,3 +46,4 @@ app.use('/testpost', testpostRoute);
 app.listen(port, function () {
 	console.log('server listening on port: ', port);
 })
+

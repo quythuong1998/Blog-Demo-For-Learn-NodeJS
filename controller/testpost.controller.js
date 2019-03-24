@@ -1,5 +1,5 @@
 //var db = require('../db')
-var post = require('../models/post.model');
+var testPost = require('../models/testPost.model');
 
 module.exports.testpost = function (req, res) {
 	
@@ -16,7 +16,7 @@ module.exports.testpost = function (req, res) {
 	// });
 
 
-	post.find().then(function (post) {
+	testPost.find().then(function (post) {
 		res.render('testpost/testpost', {
 			posts: post
 		})

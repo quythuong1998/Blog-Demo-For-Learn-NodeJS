@@ -18,7 +18,7 @@ postRouter.get('/create', function(req, res) {
 });
 
 
-postRouter.post('/create', postValidate.postValidation, postController.postPost);
+postRouter.post('/create', postValidate.postValidation ,postController.postPost);
 
 
 postRouter.get('/:id', postController.viewPost)
