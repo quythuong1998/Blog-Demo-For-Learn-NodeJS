@@ -20,7 +20,7 @@ var postRoute = require('./routers/post.route');
 var authRoute = require('./routers/auth.route');
 var authMiddleware = require('./middlewares/auth.middleware');
 var testpostRoute = require('./routers/testpost.route');
-
+var apiroute = require('./api/routers/testpost.route');
 
 //using for get info of body, user input
 var bodyParser = require('body-parser');
@@ -28,8 +28,13 @@ var bodyParser = require('body-parser');
 app.set('view engine', 'pug');
 app.set('views', './views');
 
+
+
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+
+app.use('/api', apiroute);
+
 app.use(cookieParser(process.env.SESSION_SECRET)); //day la secret, dang ra phai generate mot chuoi ngau nhien nao no de vao day
 app.use(express.static('publicfiles'));
 
